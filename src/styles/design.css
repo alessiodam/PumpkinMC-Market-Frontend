@@ -1,0 +1,229 @@
+.ds {
+  min-height: 100vh;
+}
+
+.ds-hero {
+  padding-block: var(--s-9) var(--s-8);
+  overflow: hidden;
+}
+
+.ds-hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
+  gap: var(--s-8);
+  align-items: end;
+}
+
+.ds-index {
+  display: grid;
+  gap: 2px;
+  padding: 20px;
+  border: var(--border) solid var(--fg);
+  background: var(--surface);
+  box-shadow: 6px 6px 0 var(--fg);
+}
+
+.ds-index .label {
+  margin-bottom: 10px;
+}
+
+.ds-index a {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 8px 10px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.ds-index a svg {
+  width: 16px;
+  height: 16px;
+  margin-left: auto;
+  opacity: 0;
+}
+
+.ds-index a:hover {
+  background: var(--pumpkin);
+  color: var(--on-pumpkin);
+}
+
+.ds-index a:hover .pumpkin {
+  color: var(--on-pumpkin);
+}
+
+.ds-index a:hover svg {
+  opacity: 1;
+}
+
+.ds-swatches {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: var(--s-4);
+}
+
+.ds-swatch {
+  display: grid;
+  border: var(--border) solid var(--line);
+  background: var(--surface);
+}
+
+.ds-swatch-chip {
+  height: 84px;
+  border-bottom: var(--border) solid var(--line);
+}
+
+.ds-swatch-meta {
+  display: grid;
+  gap: 2px;
+  padding: 12px 14px 14px;
+}
+
+.ds-swatch-meta strong {
+  font-weight: 800;
+}
+
+.ds-specimen {
+  display: grid;
+  grid-template-columns: 10rem 1fr;
+  align-items: baseline;
+  gap: var(--s-5);
+  padding-block: var(--s-4);
+  border-bottom: 1px solid var(--line);
+}
+
+.ds-grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--s-7);
+}
+
+.ds-grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--s-6);
+}
+
+.ds-demo {
+  display: grid;
+  gap: var(--s-4);
+  align-content: start;
+}
+
+.ds-demo > .button {
+  justify-self: start;
+}
+
+.ds-detail {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 340px;
+  gap: var(--s-7);
+}
+
+.ds-detail > * {
+  min-width: 0;
+}
+
+.ds-detail-aside {
+  display: grid;
+  gap: var(--s-5);
+  align-content: start;
+}
+
+.ds-list {
+  display: grid;
+  gap: 6px;
+  padding-left: 1.2em;
+  color: var(--fg-2);
+}
+
+.ds-list li::marker {
+  color: var(--pumpkin);
+}
+
+.ds-ratings {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: var(--s-6);
+  align-items: center;
+}
+
+.ds-ratings-bars {
+  display: grid;
+  gap: 8px;
+}
+
+.ds-ratings-bars > div {
+  display: grid;
+  grid-template-columns: 1rem 1fr 2.5rem;
+  align-items: center;
+  gap: var(--s-3);
+}
+
+.ds-studio {
+  display: grid;
+  grid-template-columns: 240px minmax(0, 1fr);
+  border: var(--border) solid var(--line);
+  background: var(--ink);
+}
+
+.ds-studio-nav {
+  align-content: start;
+  padding: 10px;
+  border-right: var(--border) solid var(--line);
+  background: var(--surface);
+}
+
+.ds-studio-main {
+  display: grid;
+  gap: var(--s-6);
+  align-content: start;
+  padding: var(--s-6);
+}
+
+.ds-language {
+  width: 170px;
+}
+
+.ds-language .dropdown-trigger {
+  min-height: 38px;
+  font-size: var(--t-14);
+  font-weight: 600;
+}
+
+.ds-language .dropdown-list {
+  top: auto;
+  bottom: calc(100% + 8px);
+}
+
+@media (max-width: 900px) {
+  .ds-hero {
+    padding-block: var(--s-7);
+  }
+
+  .ds-hero-grid,
+  .ds-grid-2,
+  .ds-grid-3,
+  .ds-detail,
+  .ds-studio {
+    grid-template-columns: 1fr;
+  }
+
+  .ds-studio-nav {
+    border-right: 0;
+    border-bottom: var(--border) solid var(--line);
+  }
+
+  .ds-specimen {
+    grid-template-columns: 1fr;
+    gap: var(--s-2);
+  }
+
+  .fields {
+    grid-template-columns: 1fr;
+  }
+
+  .fields > .field {
+    grid-column: auto !important;
+  }
+}
